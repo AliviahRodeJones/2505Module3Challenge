@@ -1,5 +1,5 @@
 ﻿@page
-@model IndexModel
+@model Module3Challenge.Pages.IndexModel
 @{
     ViewData["Title"] = "Zoo Visitors App";
 }
@@ -8,17 +8,15 @@
 
 <form method="post">
 
-    <div>
     <label>Enter the animal's hunger level (1-10):</label>
-    <input type="number" name="hungerLevel min="1" max="10" />
+    <input type="number" name="hungerLevel" min="1" max="10" required />
 
     <!-- Added an input element with a type, name, min and max -->
-    </div>
     <br><br>
 
     <label>"Enter the day of the week (1-7 where 1 is Sunday):"</label>
     <!-- Added a label with a descriptive title -->
-    <input type="number name="dayOfWeek" min="1" max="7" />
+    <input type="number" name="dayOfWeek" min="1" max="7" required />
     <!-- Added an input with a type, name, min and max -->
 
     <br><br>

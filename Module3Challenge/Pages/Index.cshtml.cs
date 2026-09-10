@@ -9,18 +9,22 @@ namespace Module3Challenge.Pages
         public string HungerMessage { get; set; } = string.Empty;
         public string SoundMessage { get; set; } = string.Empty;
         public string DayMessage { get; set; } = string.Empty;
+        public int HungerLevel { get; set; }
+        public int DayOfWeek { get; set; }
 
         public void OnGet()
         {
             // This runs when the page first loads. Nothing to do yet.
         }
 
-        public void OnPost(int hungerLevel, int dayOfWeek)
-        {
-            if (hungerLevel >= 8)
+        public void OnPost(int hungerLevel, int dayOfWeek){
+            HungerLevel = hungerLevel;
+            DayOfWeek = dayOfWeek;
+
+            if (HungerLevel >= 8)
             {
                 HungerMessage = "Lion: Roar! I need a big meal!";
-            } else if (hungerLevel >= 5){
+            } else if (HungerLevel >= 5){
                 HungerMessage = "Monkey: Ooh ooh! I'll take some bananas.";
                 
             } else
@@ -32,12 +36,12 @@ namespace Module3Challenge.Pages
             // 🐵 If hungerLevel >= 5, set HungerMessage to "Monkey: Ooh ooh! I'll take some bananas."
             // 🐢 If hungerLevel < 5, set HungerMessage to "Tortoise: Slow and steady, I'll have some lettuce."
 
-            SoundMessage = (hungerLevel >= 8) ? "Listen to the Lion: Roar!" : "Listen to the Monkey: Ooh ooh!";
+            SoundMessage = (HungerLevel >= 8) ? "Listen to the Lion: Roar!" : "Listen to the Monkey: Ooh ooh!";
             // Add your ternary operator here
             // If hungerLevel >= 8, set SoundMessage to "Listen to the Lion: Roar!"
             // Else, set SoundMessage to "Listen to the Monkey: Ooh ooh!"
 
-            switch (dayOfWeek){
+            switch (DayOfWeek){
                 case 1:
                     DayMessage = "Today is icecream sunday! All icecream cones are 50% off!";
                     break;
