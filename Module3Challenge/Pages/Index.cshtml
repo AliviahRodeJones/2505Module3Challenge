@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Zoo Visitors App";
+}
+
+<h1>Welcome to the Zoo Visitors App</h1>
+
+<form method="post">
+
+    <div>
+    <label>Enter the animal's hunger level (1-10):</label>
+    <input type="number" name="hungerLevel min="1" max="10/>
+    <!-- Added an input element with a type, name, min and max -->
+    </div>
+    <br><br>
+
+    <label></label>
+    <!-- Add a label here that says "Enter the day of the week (1-7, where 1 is Sunday):" -->
+    <!-- Add an input element here with type="number", name="dayOfWeek", min="1", and max="7" -->
+
+    <br><br>
+
+    <!-- Add a button element here with type="submit" that says "Submit" -->
+</form>
+
+<!-- Add an if statement here to check if Model.HungerMessage is not empty -->
+<!-- If it's not empty, display the three messages in paragraphs or divs -->
+<!-- Display Model.HungerMessage, Model.SoundMessage, and Model.DayMessage -->
