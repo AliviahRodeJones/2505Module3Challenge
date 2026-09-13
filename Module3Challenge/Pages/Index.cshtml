@@ -6,22 +6,26 @@
 
 <h1>Welcome to the Zoo Visitors App</h1>
 
+<!-- This is a form that gets info from the user -->
 <form method="post">
 
     <label>Enter the animal's hunger level (1-10):</label>
+    <!-- A label with user directions for the input below -->
     <input type="number" name="hungerLevel" min="1" max="10" required />
+    <!-- Added an input element for the variable hungerLevel with a type, name, min and max -->
 
-    <!-- Added an input element with a type, name, min and max -->
     <br><br>
 
     <label>"Enter the day of the week (1-7 where 1 is Sunday):"</label>
-    <!-- Added a label with a descriptive title -->
+    <!-- Added a label with user directions for the input below -->
     <input type="number" name="dayOfWeek" min="1" max="7" required />
-    <!-- Added an input with a type, name, min and max -->
+    <!-- Added an input element for the variable dayOfWeek with a type, name, min and max -->
 
     <br><br>
+
     <button type="submit">Submit!</button>
     <!-- Added a button with a type and a descriptive title -->
+
     </form>
 
 @if (Model.HungerMessage != string.Empty){
@@ -29,6 +33,6 @@
     <p>@Model.SoundMessage</p>
     <p>@Model.DayMessage</p>
 }
-<!-- Add an if statement here to check if Model.HungerMessage is not empty -->
-<!-- If it's not empty, display the three messages in paragraphs or divs -->
-<!-- Display Model.HungerMessage, Model.SoundMessage, and Model.DayMessage -->
+<!-- This statement checks if HungerMessage isn't an empty string. If not, the 
+program displays the three messages from the C# variables
+ Model.HungerMessage, Model.SoundMessage, and Model.DayMessage -->
