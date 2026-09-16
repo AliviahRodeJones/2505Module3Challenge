@@ -7,10 +7,15 @@ namespace Module3Challenge.Pages
     {
         
         public string HungerMessage { get; set; } = string.Empty;
+        // This string will hold the hunger message that is displayed on the webpage. 
         public string SoundMessage { get; set; } = string.Empty;
+        // This string will hold the sound message that is displayed on the webpage. 
         public string DayMessage { get; set; } = string.Empty;
+        // This string will hold the day message that is displayed on the webpage. 
         public int HungerLevel { get; set; }
+        // This int holds the user entered HungerLevel value after it is passed to the C# file. 
         public int DayOfWeek { get; set; }
+        // This int holds the user entered DayofWeek value after it is passed to the C# file.
 
         public void OnGet()
         {
